@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p>Please enter in a stock you would like to see the price of</p>
+    <form action="/" method="POST">
+      <label for="stock_name">Enter name: </label>
+      <input id="stock_name" type="text" name="name_field" value="">
+      <input type="submit" value="OK">
+    </form>
+
+    <%if (stock != null ) { %>
+      <h3> symbol : <%= stock.symbol %></h3>
+      <h3> full name : <%= stock.name %></h3>
+      <h3> change % : <%= stock.changesPercentage %></h3>
+      <h3> change $ : <%= stock.change %></h3>
+      <h3> daily low : <%= stock.dayLow %></h3>
+      <h3> daily high : <%= stock.dayHigh %></h3>
+      <h3> yearly low : <%= stock.yearLow %></h3>
+      <h3> yearly high : <%= stock.yearHigh %></h3>
+      <h3> market cap : <%= stock.marketCap %></h3>
+      <h3> 50 day avg : <%= stock.priceAvg50 %></h3>
+      <h3> 200 day avg : <%= stock.priceAvg200 %></h3>
+      <h3> volume : <%= stock.volume %></h3>
+      <h3> avg volume : <%= stock.avgVolume %></h3>
+      <h3> exchange: <%= stock.exchange %></h3>
+      <h3> open : <%= stock.open %></h3>
+      <h3> previous close: <%= stock.previousClose %></h3>
+
+    <% } %>
+    
+  </body>
+</html>
