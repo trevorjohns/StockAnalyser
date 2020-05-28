@@ -3,14 +3,16 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <p>Please enter in a stock you would like to see the price of</p>
-    <form action="/" method="POST">
-      <label for="stock_name">Enter name: </label>
-      <input id="stock_name" type="text" name="name_field" value="">
+    <form action="/" method="POST" autocomplete="off">
+      <div class="autocomplete" style="width:300px;">
+        <input id="stock_name" type="text" name="name_field" value="">
+      </div>
       <input type="submit" value="OK">
     </form>
 
@@ -35,4 +37,5 @@
     <% } %>
     
   </body>
+  <script src="/javascripts/suggest.js"></script>
 </html>
